@@ -3,7 +3,7 @@ import React from "react";
 
 const products = [
   {
-    id: 1,
+    id: 0,
     title: "Pillow Cushion Gift",
     image: "https://m.media-amazon.com/images/I/51lc7AZBVJL._SL1200_.jpg",
     rating: "4.5",
