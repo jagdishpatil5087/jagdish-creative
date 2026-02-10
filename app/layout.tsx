@@ -29,8 +29,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Analytics />
         {children}
+        <Analytics />
+
+        {/* 1️⃣ Load Google Analytics library */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6QRMBXZN8K"
+          strategy="afterInteractive"
+        />
+
+        {/* 2️⃣ Initialize GA */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-6QRMBXZN8K', {
+              send_page_view: false
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
