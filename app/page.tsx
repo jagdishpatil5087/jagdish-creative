@@ -39,6 +39,11 @@ export default function CreateCard() {
   };
 
   const handleGenerate = () => {
+    window.gtag?.("event", "generate_card", {
+      event_category: "engagement",
+      event_label: "valentine_card_created",
+    });
+
     const finalName = formData.partnerName || "My Dearest";
     const finalMsg = formData.message || "Will you be my Valentine?";
 

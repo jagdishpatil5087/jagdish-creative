@@ -10,9 +10,11 @@ export default function Analytics() {
   useEffect(() => {
     const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "");
 
-    // send page view to Google Analytics
-    window.gtag?.("config", "G-6QRMBXZN8K", {
+    // GA4 manual page view
+    window.gtag?.("event", "page_view", {
+      page_location: window.location.href,
       page_path: url,
+      page_title: document.title,
     });
   }, [pathname, searchParams]);
 
