@@ -4,17 +4,62 @@ import React from "react";
 const products = [
   {
     id: 1,
-    title: "Cute Hugging Teddy Bear for Your Sweetheart ",
-    image: "https://m.media-amazon.com/images/I/71LyxHucSsL._SL1500_.jpg",
+    title: "Pillow Cushion Gift",
+    image: "https://m.media-amazon.com/images/I/51lc7AZBVJL._SL1200_.jpg",
     rating: "4.5",
     reviews: "8K+ ratings",
     description:
-      "Super soft plush teddy bear perfect gift for girlfriend, boyfriend, birthdays and Valentine's day. Premium quality fabric.",
-    amazon: "https://amzn.to/4qsTn8H",
+      "Pillow Cushion Gift for Valentine's Day Anniversary Engagement Birthday Wife Husband Love Romantic Couple Gift with Cushion Filler (16 inch x 16 inch) (Design 29)",
+    amazon: "https://amzn.to/4a7g0dY",
+    flipkart: "",
+  },
+  {
+    id: 1,
+    title: "The Purple Tree Cute Panda Couple Customized Name Pillow ",
+    image: "https://m.media-amazon.com/images/I/61UnwLOBrHL._SL1024_.jpg",
+    rating: "4.5",
+    reviews: "8K+ ratings",
+    description:
+      "The Purple Tree Cute Panda Couple Customized Name Pillow (Pack of 1,16x16 Inches) Valentine's Day Gift Couple Name Pillow, Personalized Gift for Girlfriend Boyfriend, Wife",
+    amazon: "https://amzn.to/3O4n2Yo",
     flipkart: "",
   },
   {
     id: 2,
+    title: "Heart Shaped Valentines Day Gift Box",
+    image: "https://m.media-amazon.com/images/I/711UURikyxL._SL1500_.jpg",
+    rating: "4.5",
+    reviews: "8K+ ratings",
+    description:
+      "eCraftIndia Heart Shaped Valentines Day Gift Box with I Love You Message Teddy Bear 3 Red Roses Valentine Gift for Girlfriend Boyfriend Husband Wife Valentines Day Gift Valentine Day Decoration Items",
+    amazon: "https://amzn.to/46B6GN1",
+    flipkart: "",
+  },
+  {
+    id: 3,
+    title: "My Heart Beats Only for You Wooden Showpiece",
+    image: "https://m.media-amazon.com/images/I/71gPrycs60L._SL1500_.jpg",
+    rating: "4.5",
+    reviews: "8K+ ratings",
+    description:
+      "eCraftIndia My Heart Beats Only for You Wooden Showpiece & Heart Shaped Gift Box Teddy Roses Valentine Gift for Girlfriend Boyfriend Husband Wife Valentines Day Gifts Valentine Day Decoration Items",
+    amazon: "https://amzn.to/4raovek",
+    flipkart: "",
+  },
+  {
+    id: 4,
+    title: "Flower Bouquet ",
+    image: "https://m.media-amazon.com/images/I/619qYFWvgnL._SL1080_.jpg",
+    rating: "4.5",
+    reviews: "8K+ ratings",
+    description:
+      "SATYAM KRAFT 1 Pcs Artificial Flower Bouquet | Perfect Valentine Gift for Him Her Girlfriend Boyfriend Wife Husband | Romantic Decor for Anniversary, Wedding, Birthday (Rose Bouquet)",
+    amazon: "https://amzn.to/4tnTQM9",
+    flipkart: "",
+  },
+
+  {
+    id: 5,
     title: "Romantic Heart Teddy Bear for Your Sweetheart ",
     image: "https://m.media-amazon.com/images/I/617OBlRSVTL._SL1280_.jpg",
     rating: "4.3",
@@ -25,7 +70,7 @@ const products = [
     flipkart: "",
   },
   {
-    id: 3,
+    id: 6,
     title: "Teddy Bear for Your Sweetheart ",
     image: "https://m.media-amazon.com/images/I/61WBcBfY-+L._SL1280_.jpg",
     rating: "4.4",
@@ -37,24 +82,26 @@ const products = [
   },
 ];
 
+// https://amzn.to/4qDsD5C
+
 const Product = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-12">
       {/* Increased max-width to allow space for 3 columns */}
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">
-          Best Teddy Bears for Gifting 💝
+          Gifts That Say “I Love You” This Valentine 💞
         </h1>
 
         {/* Product Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl shadow-md border flex flex-col h-full transition-transform hover:-translate-y-1"
+              className="bg-white shadow-md border flex flex-col h-full transition-transform hover:-translate-y-1"
             >
               {/* Image Section - Fixed Height */}
-              <div className="h-96 w-full p-10 overflow-hidden rounded-t-2xl ">
+              <div className="h-70 w-full p-5 overflow-hidden rounded-t-2xl ">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -63,13 +110,13 @@ const Product = () => {
               </div>
 
               {/* Info Section */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-3 flex flex-col flex-grow">
                 <div className="flex-grow">
                   <h2 className="text-xl font-bold text-gray-900 line-clamp-2">
                     {item.title}
                   </h2>
 
-                  <p className="text-gray-600 mt-3 text-sm line-clamp-3">
+                  <p className="text-gray-500 mt-3 text-[12px] line-clamp-3">
                     {item.description}
                   </p>
                 </div>
